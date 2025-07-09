@@ -1,28 +1,30 @@
 {
     "manifest_version": 2,
     "name": "FFSync",
-    "version": "1.0",
-    "description": "Share browser tabs with other users easily and securely.",
-
+    "version": "1.0.1",
+    "description": "Share Firefox tabs with other users Easily and Securely.",
     "icons": {
+        "32": "assets/icon.png",
         "48": "assets/icon.png",
         "96": "assets/icon.png"
     },
+    
+    "background": {
+        "scripts": ["src/background.js"]
+    },
     "browser_action": {
         "default_icon": {
+            "32": "assets/icon.png",
             "48": "assets/icon.png",
             "96": "assets/icon.png"
         },
         "default_title": "FFSync - Share Tabs",
         "default_popup": "src/popup.html"
     },
-    "background": {
-        "scripts": ["src/background.js"]
-    },
     "content_scripts": [
         {
-        "matches": ["<all_urls>"],
-        "js": ["src/content.js"]
+            "matches": ["<all_urls>"],
+            "js": ["src/content.js"]
         }
     ]
 }
