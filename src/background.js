@@ -1,2 +1,1 @@
-console.clear()
-console.log("background loaded");
+console.log("[FFSync] BG Loaded");

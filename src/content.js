@@ -1,1 +1,1 @@
-console.log("content loaded ", document);
+console.log("[FFSync] Content Loaded");
