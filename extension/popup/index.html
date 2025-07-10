@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<html lang="en">
+    <body>
+        <div id="topbar" class="item">
+            <h3>FFSync</h3>
+            <p>Share Tabs Privately</p>
+        </div>
+
+        <div id="content" class="item">
+            <input type="text" placeholder="Enter homeserver" id="homeserver">
+            <div id="tabs">
+                <ul id="tablist" class="item">
+                    <li class="tab selected" data-tabid=-1>Current Tab</li>
+                </ul>
+            </div>
+            <button id="share"></button>
+        </div>
+        <sep ></sep>
+        <div id="status">
+            <p id="connection">No Connection.</p>
+            <p id="shared">No shared tab.</p>
+            <p id="duration">00:00 Elapsed.</p>
+        </div>
+    </body>
+</html>
+
+<script src="index.js"></script>

@@ -1,0 +1,95 @@
+:root {
+    --bg: #101012;
+    --fg: #202024;
+    --hl: #4040b0;
+    --text: #e0e0e0;
+
+    --spad: clamp(7px, 3%, 12px);
+    --lpad: clamp(12px, 5%, 22px);
+
+    --srad: 5px;
+    --lrad: 15px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 0.9rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr auto 1fr;
+    background-color: var(--bg);
+    color: var(--text);
+    gap: var(--spad);
+    padding: var(--lpad);
+}
+button {
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: var(--hl);
+    color: var(--text);
+    border: none;
+    border-radius: var(--lrad);
+    padding: var(--spad);
+    cursor: pointer;
+}
+input {
+    all: unset;
+    background-color: var(--fg);
+    color: var(--text);
+    border: none;
+    border-radius: var(--srad);
+    padding: var(--spad);
+}
+ul, li {
+    list-style: none;
+    cursor: pointer;
+    padding: var(--spad);
+}
+li:hover {
+    color: var(--hl);
+}
+li.selected {
+    border-left: 2px solid var(--hl);
+}
+
+sep {
+    background-color: var(--fg);
+    height: 1px;
+}
+
+.sharing {
+    background-color: darkred !important;
+}
+.connecting {
+    background-color: darkgoldenrod !important;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--srad);
+    gap: var(--lpad);
+    padding: var(--spad);
+}
+
+#topbar {
+    background-color: var(--fg);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+#content {
+    gap: var(--spad);
+}
+
+
+#tablist {
+    background-color: var(--fg);
+    overflow-y: scroll;
+    max-height: 200px;
+}

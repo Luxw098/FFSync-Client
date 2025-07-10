@@ -1,0 +1,16 @@
+{
+  "name": "ffsync",
+  "private": true,
+  "scripts": {
+    "build": "tsc && bun run minify",
+    "minify": "bun run minify:index && bun run minify:content && bun run minify:background",
+    "minify:index": "terser dist/popup/logic.js dist/popup/registry.js dist/popup/ui.js -o extension/popup/index.js",
+    "minify:content": "terser dist/content.js -o extension/content.js",
+    "minify:background": "terser dist/background.js -o extension/background.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5",
+    "terser": "^5.43.1"
+  }
+}
