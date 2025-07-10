@@ -61,10 +61,10 @@ sep {
 }
 
 .sharing {
-    background-color: darkred;
+    background-color: darkred !important;
 }
 .connecting {
-    background-color: darkgoldenrod;
+    background-color: darkgoldenrod !important;
 }
 
 .item {
