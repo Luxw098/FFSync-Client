@@ -1,1 +1,1 @@
-"use strict";console.log("[FFSync] Content Loaded");
+"use strict";(()=>{console.log("[FFSync] Content Loaded");})();

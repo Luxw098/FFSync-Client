@@ -1,16 +1,22 @@
 {
-  "name": "ffsync",
-  "private": true,
-  "scripts": {
-    "build": "tsc && bun run minify",
-    "minify": "bun run minify:index && bun run minify:content && bun run minify:background",
-    "minify:index": "terser dist/popup/logic.js dist/popup/registry.js dist/popup/ui.js -o extension/popup/index.js",
-    "minify:content": "terser dist/content.js -o extension/content.js",
-    "minify:background": "terser dist/background.js -o extension/background.js"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "typescript": "^5",
-    "terser": "^5.43.1"
-  }
+	"name": "ffsync",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"package": "bun run clean && tsc && bun run minify",
+		"clean": "rimraf dist",
+		"minify": "bun run minify:index && bun run minify:content && bun run minify:background",
+		"minify:index": "esbuild dist/popup/index.js --bundle --minify --outfile=extension/popup/index.js",
+		"minify:content": "esbuild dist/content.js --bundle --minify --outfile=extension/content.js",
+		"minify:background": "esbuild dist/background.js --bundle --minify --outfile=extension/background.js"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"esbuild": "^0.25.6",
+		"rimraf": "^6.0.1",
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"ucrypt-ts": "^1.8.0"
+	}
 }

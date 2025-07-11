@@ -1,1 +1,1 @@
-"use strict";console.clear();console.log("[FFSync] BG Loaded");
+"use strict";(()=>{console.clear();console.log("[FFSync] BG Loaded");})();
